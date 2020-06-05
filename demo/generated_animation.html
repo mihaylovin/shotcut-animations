@@ -1,0 +1,101 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+
+  <title>Intro</title>
+  <meta name="description" content="Intro">
+  <meta name="author" content="Nikolay Mihaylov">
+
+  <style type="text/css">
+	body,html {
+		padding: 0px;
+		--framerate: 25;
+	}
+	
+	#view {
+		position: relative;
+		width: 1920px;
+		height: 1080px;
+		overflow: hidden;
+		background-color: red;
+	}
+	
+	#route-wrapper {
+		overflow: hidden;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		animation: reveal 5s linear 0s 1 normal;
+	}
+	
+	@keyframes slide {
+	  0% {top: -250px; left: 0px; width: 8640px;}
+	  55% {top: -60px; left: -200px; width: 2880px;}
+	  70% {top: -60px; left: -400px; width: 2400px;}
+	  100% {top: -520px; left: -1320px; width: 3264px;}
+	}
+	
+	@keyframes fly {
+	  0% {width: 100px; top: 700px; left: 200px;}
+	  55% {width: 200px; top: 90px; left: 700px;}
+	  70% {width: 220px; top: 200px; left: 700px;}
+	  100% {width: 80px; top: 800px; left: 850px;}
+	}
+	
+	@keyframes reveal {
+	  0% {width: 0%}
+	  55% {width: 55%;}
+	  70% {width: 70%}
+	  100% {width: 100%}
+	}
+	
+	
+	#map {
+		position: absolute;
+		top: -520px; left: -1320px; width: 170%;
+		z-index: 50;
+		animation: slide 5s linear 0s 1 normal;
+	}
+	
+	#route-wrapper {
+		overflow: hidden;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		animation: reveal 5s linear 0s 1 normal;
+	}
+	
+	#route {
+		position: absolute;
+		top: -520px; left: -1320px; width: 170%;
+		z-index: 75;
+		animation: slide 5s linear 0s 1 normal;
+	}
+	
+	#plane {
+		position: absolute;
+		width: 1px; top: 800px; left: 850px;
+		z-index: 100;
+		animation: fly 5s linear 0s 1 normal;
+	}
+  </style>
+
+</head>
+
+<body>
+	<div id="view">
+		<img id="plane" src="./img/plane.png" alt="plane">
+		<img id="map" src="./img/map_edited.jpg" alt="map">
+		<div id="route-wrapper">
+			<img id="route" src="./img/route.png" alt="route">
+		</div>
+	</div>
+	<script src="../css2elusien.js"></script>
+	<script src="./jquery.min.js"></script>
+	<script src="./elusien_cssanims2js.js"></script>
+
+
+<script>window.elusien_keyframes={"slide":[{"offset":0,"top":"-250px","left":"0px","width":"8640px"},{"offset":0.55,"top":"-60px","left":"-200px","width":"2880px"},{"offset":0.7,"top":"-60px","left":"-400px","width":"2400px"},{"offset":1,"top":"-520px","left":"-1320px","width":"3264px"}],"fly":[{"offset":0,"width":"100px","top":"700px","left":"200px"},{"offset":0.55,"width":"200px","top":"90px","left":"700px"},{"offset":0.7,"width":"220px","top":"200px","left":"700px"},{"offset":1,"width":"80px","top":"800px","left":"850px"}],"reveal":[{"offset":0,"width":"0%"},{"offset":0.55,"width":"55%"},{"offset":0.7,"width":"70%"},{"offset":1,"width":"100%"}]};window.elusien_animate=[{"elements":"#route-wrapper","animations":[{"keyname":"reveal","timings":{"duration":5000,"easing":"linear","delay":0,"iterations":1,"direction":"normal"}}]},{"elements":"#map","animations":[{"keyname":"slide","timings":{"duration":5000,"easing":"linear","delay":0,"iterations":1,"direction":"normal"}}]},{"elements":"#route-wrapper","animations":[{"keyname":"reveal","timings":{"duration":5000,"easing":"linear","delay":0,"iterations":1,"direction":"normal"}}]},{"elements":"#route","animations":[{"keyname":"slide","timings":{"duration":5000,"easing":"linear","delay":0,"iterations":1,"direction":"normal"}}]},{"elements":"#plane","animations":[{"keyname":"fly","timings":{"duration":5000,"easing":"linear","delay":0,"iterations":1,"direction":"normal"}}]}];window.elusien_framerate=25;</script></body></html>
