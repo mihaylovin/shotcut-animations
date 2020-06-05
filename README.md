@@ -20,7 +20,7 @@ Add `--framerate` as a CSS property to `body`. The framerate should match the fr
 	}
 ```
 
-With you HTML page containing the CSS3 animation open in you browser append the hash `#generate` (e.g. `http://localhost/intro/index.html#generate`) to the address in the browser's address bar and you will be prompted to download a generated HTML file. Save the file in the same folder as the original HTML file with the CSS3 animation. 
+With your HTML page containing the CSS3 animation open in you browser append the hash `#generate` (e.g. `http://localhost/intro/index.html#generate`) to the address in the browser's address bar and you will be prompted to download a generated HTML file. Save the file in the same folder as the original HTML file with the CSS3 animation. 
 
 Import the generated file into Shotcut using the `Text: HTML` filter and make sure to check the "Use Webvfx JavaScript extension" option.
 
